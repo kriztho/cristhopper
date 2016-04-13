@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Cristhopper Armenta</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/js/jquery-2.2.3.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
+    <style>
+      .carousel-inner > .item > img,
+      .carousel-inner > .item > a > img {
+          width: 100%;
+          margin: auto;
+
+      }
+    </style>
+</head>
+
+<body>
+    <div class = "container">
+        <div class = "row header">
+            <div class = "col-md-12 text-right">
+                <h1 class="text-lowercase title-super font-thin">Cristhopper Armenta</h1>
+                <h3 class="title-tagline">De músico, poeta y loco... un poco</h3>
+            </div>
+            <!-- <div class = "col-md-2 title-logo">
+                <span class="pull-right">
+                    <img src="http://placehold.it/145x100" class="img-responsive">
+                </span>
+            </div> -->
+        </div>
+        <div class = "row">
+            <br>
+            <div class = "col-md-12">
+                <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#mainCarousel" data-slide-to="1"></li>
+                    <li data-target="#mainCarousel" data-slide-to="2"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <a href="https://soundcloud.com/cristhopper/doors">
+                            <img src="assets/img/carousel-01.png" alt="Doors Single Cover Art">
+                        </a>
+                      <!-- <div class="carousel-caption">
+                        <h3>Doors</h3>
+                        <p>Listen to my most recent single</p>
+                      </div> -->
+                    </div>
+                    <div class="item">
+                        <a href="https://soundcloud.com/cristhopper/si-no-tuvieras-miedo">
+                            <img src="assets/img/carousel-02.png" alt="Si no tuvieras miedo Single Cover Art">
+                        </a>
+                      <!-- <div class="carousel-caption">
+                        <h3>Si no tuvieras miedo</h3>
+                        <p>Listen to single</p>
+                      </div> -->
+                    </div>
+                    <div class="item">
+                        <a href="https://soundcloud.com/cristhopper/rey-de-pretextos">
+                            <img src="assets/img/carousel-03.png" alt="Rey de pretextos Single Cover Art">
+                        </a>
+                      <!-- <div class="carousel-caption">
+                        <h3>Rey de pretextos</h3>
+                        <p>Listen to single</p>
+                      </div> -->
+                    </div>
+                  </div>
+
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#mainCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#mainCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+        <div class = "row footer">
+            <br>
+            <p class="text-center">Copyright © 2016. All Rights Reserved.</p>
+        </div>
+    </div>
+
+
+    <!-- Configuring Carousel -->
+    <script>
+    $('#mainCarousel').carousel({
+        interval: 5000
+    })
+</script>
+</body>
+ </html>
