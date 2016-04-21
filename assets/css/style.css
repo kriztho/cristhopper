@@ -34,10 +34,10 @@ ul, ol {
 
 
 
-/* BIG VIDEO BACKGROUND
+/* VIDEO BACKGROUND
 ================================================== */
-.big-background {
-    z-index:550;
+.video-background {
+    z-index:0;
     text-align:center;
     height:100%;
     min-height:100%;
@@ -45,7 +45,7 @@ ul, ol {
     overflow:hidden
 }
 
-.big-background .big-background-container {
+.video-background .video-background-container {
     width:830px;
     max-width:100%;
     display:inline-block;
@@ -59,8 +59,7 @@ ul, ol {
     transform:translate(-50%,-50%)
 }
 
-.big-background-title {
-    /*font-style: italic;*/
+.video-background-title {
     font-size:78px;
     color:#fff;
     font-weight:300;
@@ -74,8 +73,7 @@ ul, ol {
     background-position:top center
 }
 
-a.big-background-btn {
-    font-family:'Lato',sans-serif;
+a.video-background-btn {
     font-size:13px;
     text-transform:uppercase;
     text-decoration:none;
@@ -93,12 +91,12 @@ a.big-background-btn {
     transition:.4s background ease;
 }
 
-.big-background-btn:hover {
+.video-background-btn:hover {
     color:#fff;
     background:rgba(255,255,255,0.20)
 }
 
-.big-background-default-image {
+.video-background-default-image {
     background:url(../images/sunset.jpg);
     background-repeat:no-repeat;
     background-position:center center;
@@ -135,72 +133,20 @@ a.big-background-btn {
     text-transform:uppercase;
 }
 
-.wrapper {
-    z-index: 600;
-    position: relative;
-}
 
 
 
 
 
-
-/* ABOUT SECTION
+/* Music Section
 ================================================== */
-.about-section {    
+.music-section {    
     color:#7f8c8d;
     background:#fff;
-    padding:60px 20px
+    padding: 0;
+    z-index: 2;
 }
 
-.about-section-container {
-    text-align:center;
-    padding-bottom:50px
-}
-
-.about-section-title {
-    font-size:40px;
-    background:#fff;
-    color:#3d566e;
-    padding:0 35px;
-    margin-bottom:22px;
-    background-attachment:scroll;
-    background-repeat:repeat-x;
-    background-position:center center;
-    text-transform:uppercase
-}
-
-
-
-a.about-section-btn {
-    font-size:13px;
-    text-transform:uppercase;
-    text-decoration:none;
-    color:#34495e;
-    background:transparent;
-    border:2px solid #34495e;
-    padding:10px 14px;
-    cursor:pointer;
-    letter-spacing:2px;
-    text-align:center;
-    display:inline-block;
-    -webkit-transition:.4s background ease;
-    -moz-transition:.4s background ease;
-    -o-transition:.4s background ease;
-    transition:.4s background ease;
-}
-
-.about-section-btn:hover {
-    color:#fff;
-    background: #34495e;
-}
-
-
-
-
-
-/* Main Section
-================================================== */
 .title-super {
     font-size: 60px;
     margin-top: 10px;
@@ -241,6 +187,16 @@ a.about-section-btn {
     text-align: center;
 }
 
+.item {
+  width: 100%;
+  height: 100%;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 
 
@@ -252,6 +208,7 @@ a.about-section-btn {
     position:relative;
     width:100%;
     overflow:hidden
+    color: white;
 }
 
 .small-background-container {
@@ -274,7 +231,12 @@ a.about-section-btn {
     background-position:top center
 }
 
-
+.copyright {
+    margin-top: 20px;
+    color: #ccc;
+    text-align: center;
+    z-index:10;
+}
 
 
 
@@ -301,7 +263,7 @@ a.about-section-btn {
   width: 100%;
   height: 30px;
   background: rgba(255,255,255,1);
-  z-index: 2;
+  z-index: 3;
 }
 
 /* Music player */
@@ -371,7 +333,7 @@ a.about-section-btn {
   }
 
   .small-background-section {
-      background: url(../img/backgroundTablet.png) 35% 40%;
+      background: url(../img/background2.png) 35% 40%;
   }
 
   #colorize {
@@ -446,6 +408,6 @@ a.about-section-btn {
   }
 
   .small-background-section {
-      background: url(../img/background.png) 35% 40%;
+      background: url(../img/background2.png) 35% 40%;
   }
 }

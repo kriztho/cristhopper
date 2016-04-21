@@ -83,3 +83,24 @@ function play() {
         playButton.className = "play";
     }
 }
+
+// var $item = $('.carousel .item');
+// var $wHeight = $(window).height();
+
+// console.log($wHeight);
+
+// $item.height($wHeight); 
+// $item.addClass('full-screen');
+
+// $('.carousel img').each(function() {
+//   var $src = $(this).attr('src');
+//   $(this).parent().css({
+//     'background-image' : 'url(' + $src + ')'
+//   });
+//   $(this).remove();
+// });
+
+// $(window).on('resize', function (){
+//   $wHeight = $(window).height();
+//   $item.height($wHeight);
+// });
