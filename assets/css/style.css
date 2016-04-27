@@ -4,7 +4,7 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
 
-    font-family: 'Lato', sans-serif;    
+    font-family: 'Lato', sans-serif;
 }
 
 html {
@@ -19,9 +19,9 @@ body {
 }
 
 ul li {
-     display:inline-block; 
-     list-style:none; 
-     padding-right: 10px; 
+     display:inline-block;
+     list-style:none;
+     padding-right: 10px;
 }
 
 ul, ol {
@@ -102,7 +102,7 @@ ul, ol {
     max-width:100%;
     display:inline-block;
     position:absolute;
-    top:45%;
+    top:85%;
     left:50%;
     -webkit-transform:translate(-50%,-50%);
     -moz-transform:translate(-50%,-50%);
@@ -112,10 +112,10 @@ ul, ol {
 }
 
 .video-background-title {
-    font-size:78px;
+    font-size:58px;
     color:#fff;
     font-weight:300;
-    text-transform:uppercase;
+    /*text-transform:lowercase;*/
     text-align:center;
     margin-bottom:22px;
     padding-top:20px;
@@ -126,12 +126,12 @@ ul, ol {
 }
 
 a.video-background-btn {
-    font-size:13px;
-    text-transform:uppercase;
+    font-size:16px;
+    /*text-transform:uppercase;*/
     text-decoration:none;
-    color:#fff;
+    color:#9d9d9d;
     background:transparent;
-    border:2px solid #fff;
+    border:2px solid #9d9d9d;
     padding:10px 14px;
     cursor:pointer;
     letter-spacing:2px;
@@ -182,7 +182,7 @@ a.video-background-btn {
     color: #A8DBA8;
     font-size: 30px;
     font-weight: 300;
-    text-transform:uppercase;
+    /*text-transform:lowercase;*/
 }
 
 
@@ -192,7 +192,7 @@ a.video-background-btn {
 
 /* Music Section
 ================================================== */
-.music-section {    
+.music-section {
     color:#7f8c8d;
     background:#fff;
     padding: 0;
@@ -276,7 +276,7 @@ a.video-background-btn {
 
 
 
-/* SMALL VIDEO BACKGROUND 
+/* SMALL VIDEO BACKGROUND
 ================================================== */
 .small-background-section {
     padding:100px 0;
@@ -297,7 +297,7 @@ a.video-background-btn {
     font-weight:300;
     z-index:10;
     display:inline-block;
-    text-transform:uppercase;
+    /*text-transform:uppercase;*/
     margin-bottom: 20px;
     margin-top: 0;
     position:relative;
@@ -432,7 +432,7 @@ a.video-background-btn {
   }
 
   .footer {
-    height: 50px;    
+    height: 50px;
   }
 
     /* Music player */
