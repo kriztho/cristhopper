@@ -4,12 +4,12 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 html {
   height: 100%;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 body {
@@ -41,7 +41,6 @@ ul, ol {
     color: white;
     background-color: transparent;
     border-color: transparent;
-    font-weight: 300;
 }
 
 .nav, .navbar-brand {
@@ -62,7 +61,13 @@ ul, ol {
 
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
      background-color: transparent;
-     border-width: 0;
+     border:2px solid #DAD9D9;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #DAD9D9;
+    background-color: transparent;
+    /* border: 2px solid #DAD9D9; */
 }
 
 /*.navbar-toggle {
@@ -125,8 +130,9 @@ ul, ol {
     background-position:top center
 }
 
-.square-btn {
+.video-square-btn {
     font-size:14px;
+    font-weight: 400;
     text-transform:uppercase;
     text-decoration:none;
     color:#9d9d9d;
@@ -134,7 +140,7 @@ ul, ol {
     border:2px solid #9d9d9d;
     padding:10px 14px;
     cursor:pointer;
-    letter-spacing:2px;
+    /*letter-spacing:2px;*/
     text-align:center;
     display:inline-block;
     -webkit-transition:.4s background ease;
@@ -143,8 +149,9 @@ ul, ol {
     transition:.4s background ease;
 }
 
-.square-btn:hover {
-    color:#fff;
+.video-square-btn:hover {
+    color:#DAD9D9;
+    border:2px solid #DAD9D9;
     background:rgba(255,255,255,0.20);
     text-decoration:none;
 }
@@ -274,43 +281,54 @@ ul, ol {
   background-repeat: no-repeat;
 }
 
-.songPage {
-    height: 500px;
-    width: 80%;
-    max-width: 970px;
-    position: absolute;
-    top: 15%;
-    left: 10%;
-    background-color: rgba(230,230,230,0.7);
-}
-
-.rowTop {
-  padding: 15px;
-}
-
-.rowBottom {
-}
-
-#artcover {
-    margin: 0 auto;
-    width: 75%;
-    max-width: 300px;
-    min-width: 150px;
-    box-shadow: 0px 0px 10px #888;
-}
-
-.item img {
-    margin: 5px;
-}
-
 .buttons {
+    font-weight: 400;
+    width: 100%;
+    font-size: 50px;
+    color: #757575;
+    padding: 25px;
     text-align: center;
-    margin-top: 25px;
+    position: absolute;
+    bottom: 15%;
+    background-color: rgba(227,227,227, 0.6);
+    font-family: Oswald;
+    text-transform: uppercase;
 }
 
-.songDescription {
-    font-size: 16px;
-    padding: 15px;
+a.buttons {
+    width: 60px;
+    margin-right: 5px;
+}
+
+.square-btn {
+    width: 130px;
+    font-size:14px;
+    font-weight: 500;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:#6D6D6D;
+    background:transparent;
+    border:2px solid #6D6D6D;
+    padding:10px 14px;
+    cursor:pointer;
+    letter-spacing:2px;
+    text-align:center;
+    display:inline-block;
+    -webkit-transition:.4s background ease;
+    -moz-transition:.4s background ease;
+    -o-transition:.4s background ease;
+    transition:.4s background ease;
+}
+
+.square-btn:hover {
+    color:#DAD9D9;
+    border:2px solid #6D6D6D;
+    background:#6D6D6D;
+    text-decoration:none;
+}
+
+.overlay {
+    background-color: rgba(187,187,187,0.2);
 }
 
 
@@ -334,7 +352,7 @@ ul, ol {
     font-size: 30px;
     color:#A8DBA8;
     font-weight:300;
-    z-index:10;
+    z-index:2;
     display:inline-block;
     /*text-transform:uppercase;*/
     margin-bottom: 20px;
