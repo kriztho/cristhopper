@@ -83,3 +83,15 @@ function play() {
         playButton.className = "play";
     }
 }
+
+/***************** Top-Bar scrolling ******************/
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 50) {
+        $(".navbar-inverse").css("background-color", "rgba(0,0,0,0.6")
+    } else {
+        $(".navbar-inverse").css("background-color", "transparent")        
+    }
+});

@@ -38,58 +38,57 @@ ul, ol {
 ================================================== */
 #navcontainer {
     width: inherit;
-    color: white;
-    background-color: transparent;
-    border-color: transparent;
+    color: #B3B3B3;
+}
+
+.scrolling {
+    background-color: rgba(36, 40, 48, 0.46);
+    color: rgba(255, 255, 255, 0.64);
 }
 
 .nav, .navbar-brand {
     float: right;
     font-size: 15pt;
     text-transform: lowercase;
+    color: #B3B3B3;
+}
+
+.navbar-brand {
+  float: left;
+  color: #B3B3B3;
 }
 
 .navbar-inverse, .navbar-toggle {
     background-color: transparent;
-    border-width: 0;
+    border: 0pt transparent;
+    color: #B3B3B3;
 }
 
-.navbar-header {
-    background-color: transparent;
-    border-width: 0;
+.navbar-inverse .navbar-brand {
+    color: #B3B3B3;
 }
 
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
      background-color: transparent;
-     border:2px solid #DAD9D9;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-    color: #DAD9D9;
-    background-color: transparent;
-    /* border: 2px solid #DAD9D9; */
-}
-
-/*.navbar-toggle {
-    border-width: 0;
-}*/
-
-.navbar-inverse .navbar-toggle {
-    border-color: transparent;
-    border-width: 0;
-}
-
-.navbar-fixed-top {
-    border-width: 0;
-    border-color: transparent;
+     border: 0pt transparent;
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-width: 0;
-    border-color: transparent;
     box-shadow: none;
+    border: 0pt transparent;
 }
 
+.navbar-toggle {
+    padding: 10px 10px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    color: #B3B3B3;
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #B3B3B3;
+}
 
 /* VIDEO BACKGROUND
 ================================================== */
@@ -135,9 +134,9 @@ ul, ol {
     font-weight: 400;
     text-transform:uppercase;
     text-decoration:none;
-    color:#9d9d9d;
+    color:#B3B3B3;
     background:transparent;
-    border:2px solid #9d9d9d;
+    border:2px solid #B3B3B3;
     padding:10px 14px;
     cursor:pointer;
     /*letter-spacing:2px;*/
@@ -150,8 +149,8 @@ ul, ol {
 }
 
 .video-square-btn:hover {
-    color:#DAD9D9;
-    border:2px solid #DAD9D9;
+    color:#B3B3B3;
+    border:2px solid #B3B3B3;
     background:rgba(255,255,255,0.20);
     text-decoration:none;
 }
@@ -281,16 +280,33 @@ ul, ol {
   background-repeat: no-repeat;
 }
 
+.buttons-container {
+    width: 400px;
+    height: 150px;
+    margin: auto;
+    bottom: -70%;
+    position: relative
+}
+
+.buttons-background {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 .buttons {
     font-weight: 400;
     width: 100%;
+    height: 100%;
     font-size: 50px;
-    color: #757575;
-    padding: 25px;
+    color: rgba(245,245,245,0.7);
     text-align: center;
-    position: absolute;
-    bottom: 15%;
-    background-color: rgba(227,227,227, 0.6);
+    position: relative;
+    background-color: rgba(34,34,34, 0.4);
     font-family: Oswald;
     text-transform: uppercase;
 }
@@ -306,9 +322,9 @@ a.buttons {
     font-weight: 500;
     text-transform:uppercase;
     text-decoration:none;
-    color:#6D6D6D;
+    color: rgba(245,245,245,0.7);
     background:transparent;
-    border:2px solid #6D6D6D;
+    border:2px solid rgba(245,245,245,0.7);
     padding:10px 14px;
     cursor:pointer;
     letter-spacing:2px;
@@ -321,7 +337,7 @@ a.buttons {
 }
 
 .square-btn:hover {
-    color:#DAD9D9;
+    color:white;
     border:2px solid #6D6D6D;
     background:#6D6D6D;
     text-decoration:none;
@@ -464,6 +480,17 @@ a.buttons {
   .video-background {
       background: url(../img/backgroundTablet.png) 35% center;
   }
+
+  .buttons {
+    font-size: 30px;
+    padding: 15px;
+  }
+
+  .square-btn {
+    width: auto;
+    font-size:12px;
+    padding:10px 14px;
+}
 
   .small-background-section {
       background: url(../img/background2.png) 35% 40%;
