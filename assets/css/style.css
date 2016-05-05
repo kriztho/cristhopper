@@ -432,7 +432,7 @@ a.buttons {
 }
 
 #trackTime {
-  float:left;
+  float:right;
   margin-left: 10px;
   padding: 5px;
   color: rgba(245,245,245,0.7);
@@ -443,7 +443,6 @@ a.buttons {
   width: 30px;
   border: none;
   margin-right: 5px;  
-  margin-top: 5px;
   float: left;
   outline: none;  
   opacity: 0.6;
