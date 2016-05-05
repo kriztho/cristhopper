@@ -111,7 +111,7 @@ ul, ol {
     max-width:100%;
     display:inline-block;
     position:absolute;
-    top:85%;
+    top:80%;
     left:50%;
     -webkit-transform:translate(-50%,-50%);
     -moz-transform:translate(-50%,-50%);
@@ -420,8 +420,8 @@ a.buttons {
 
 /* Music player */
 #musicPlayer {
-  /*width: 20%;*/
-  /*height: 30px;*/
+  width: 100%;
+  height: 30px;
 }
 
 #trackName {
@@ -442,8 +442,8 @@ a.buttons {
   height: 30px;
   width: 30px;
   border: none;
-  padding: 0;
   margin-right: 5px;  
+  margin-top: 5px;
   float: left;
   outline: none;  
   opacity: 0.6;
@@ -475,10 +475,10 @@ a.buttons {
 }
 
 #controls {
-  width: 20%;
+  float: left;
+  width: auto;
   height: inherit;
 }
-
 
 
 
@@ -534,18 +534,27 @@ a.buttons {
     height: 50px;
   }
 
-    /* Music player */
-  #trackName {
-    float:left;
-    margin-left: 30px;
-    margin-top: 10px;
-    font-size: 22px;
-    padding: 5px;
+  /* Music player */
+  #musicPlayer {
+    height: 50px;
   }
 
+  #trackName {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  #trackTime {
+    font-size: 20px;
+    padding: 10px;
+    color: rgba(245,245,245,0.7);
+  }
+  
   .button {
-    height: 50px;
-    width: 50px;
+    margin-top: 5px;
+    margin-right: 5px;
+    height: 40px;
+    width: 40px;
   }
 
 }
@@ -559,5 +568,26 @@ a.buttons {
 
   .small-background-section {
       background: url(../img/background2.png) 35% 40%;
+  }
+
+  #trackName {
+    font-size: 15px;
+    padding: 15px 0px 10px 4px;
+    margin: 0;
+  }
+
+  #trackTime {
+    font-size: 15px;    
+    color: rgba(245,245,245,0.7);
+    float: right;
+    padding: 15px 0px 10px 2px;
+    margin: 0;
+  }
+  
+  .button {
+    margin: 8px 0 0 0;
+    padding: 0;
+    height: 35px;
+    width: 35px;
   }
 }
