@@ -1,87 +1,92 @@
 // JS file with all functions needed
 
-// Music Player Functions
+// song Player Functions
 var duration;
-var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
-var music = document.getElementById('song1')
-music.addEventListener("timeupdate", timeUpdate, false);
+var music = [document.getElementById('song1'),
+            document.getElementById('song2'),
+            document.getElementById('song3')]
+var currentSong = 0
 
 // Get audio file duration
-music.addEventListener("canplaythrough", function() {
-    duration = music.duration;
-}, false);
-
-timeline.addEventListener("click", function(event) {
-    moveplayhead(event);
-    music.currentTime = duration * clickPercent(event);
-}, false);
-
-// Makes playhead draggable
-playhead.addEventListener('mousedown', mouseDown, false);
-playhead.addEventListener('touchstart', mouseDown, false);
-window.addEventListener('mouseup', mouseUp, false);
-window.addEventListener('touchstop', mouseUp, false);
-
-// Boolean value so that mouse is moved on mouseUp only when the playhead is released
-var onplayhead = false;
-// mouseDown EventListener
-function mouseDown() {
-    onplayhead = true;
-    window.addEventListener('mousemove', moveplayhead, true);
-    music.removeEventListener('timeupdate', timeUpdate, false);
-}
-// mouseUp EventListener
-// getting input from all mouse clicks
-function mouseUp(e) {
-    if (onplayhead == true) {
-        moveplayhead(e);
-        window.removeEventListener('mousemove', moveplayhead, true);
-        // change current time
-        music.currentTime = duration * clickPercent(e);
-        music.addEventListener('timeupdate', timeUpdate, false);
-    }
-    onplayhead = false;
-}
-
-window.addEventListener('mouseup', function() {
-
-}, false);
-
-function clickPercent(e) {
-    return (e.pageX - timeline.offsetLeft) / timelineWidth
-}
-
-function moveplayhead(e) {
-    var newMarginLeft = e.pageX - timeline.offsetLeft;
-
-    // console.log(" " + e.pageX + " " + timeline.offsetLeft);
-
-    if (newMarginLeft > 0 && newMarginLeft < timelineWidth) {
-        playhead.style.marginLeft = newMarginLeft + "px";
-    }
-    if (newMarginLeft == 0) {
-        playhead.style.marginLeft = "0px";
-    }
-    if (newMarginLeft == timelineWidth) {
-        playhead.style.marginLeft = timelineWidth + "px";
-    }
-}
+// song.addEventListener("canplaythrough", function() {
+//     duration = song.duration;
+// }, false);
 
 function timeUpdate() {
-    var playPercent = 100 * (music.currentTime / duration);
-    playhead.style.marginLeft = playPercent + "%";
+    var min = Math.floor(song.currentTime / 60.0);
+    var sec = Math.floor(song.currentTime % 60.0);  
+    var minDuration = Math.floor(song.duration / 60.0);
+    var secDuration = Math.floor(song.duration % 60.0);  
+
+    if (min < 10) {
+        min = "0" + min;
+    }
+    if (sec < 10) {
+        sec = "0" + sec;
+    }
+    if (minDuration < 10) {
+        minDuration = "0" + minDuration;
+    }
+    if (secDuration < 10) {
+        secDuration = "0" + secDuration;
+    }    
+
+    var currentTime = min + ":" + sec;
+    var duration = minDuration + ":" + secDuration;
+    var timeDisplay = currentTime + " - " + duration;
+    $("#trackTime").text(timeDisplay);
 }
 
 function play() {
-    if (music.paused) {
-        music.play();
+
+    // Get current song
+    song = music[currentSong];
+    song.addEventListener("timeupdate", timeUpdate, false);
+
+    if (song.paused) {
+        song.play();
         playButton.className = "";
         playButton.className = "button pause";
     } else {
-        music.pause();
+        song.pause();
         playButton.className = "";
         playButton.className = "button play";
     }
+
+    $("#trackName").text(song.getAttribute("name"));
+}
+
+function next() {
+    
+    // Restart current song
+    song.currentTime = 0;
+    song.pause();
+    song.removeEventListener("timeupdate", timeUpdate, false);
+
+    // Advance to next song
+    currentSong++;
+    if (currentSong >= music.length) {
+        currentSong = 0;
+    }
+    
+    // Play
+    play();
+}
+
+function previous() {
+
+    // Restart current song
+    song.currentTime = 0;
+    song.pause();
+
+    // Advance to previous song
+    currentSong--;
+    if (currentSong < 0) {
+        currentSong = music.length - 1;
+    }
+    
+    // Play
+    play();
 }
 
 /***************** Top-Bar scrolling ******************/

@@ -157,9 +157,9 @@
                             <button id="playButton" class="button play" onclick="play()"></button>
                             <button id="nextButton" class="button next" onclick="next()"></button>
                         </div> 
-                        <div id="timeline">
-                            <span id="trackName" class="">Doors</span>
-                            <div id="playhead"></div>
+                        <div id="display">
+                            <span id="trackName"></span>
+                            <span id="trackTime"></span> 
                         </div>
                     </div>
                 </div>
@@ -170,9 +170,17 @@
 
 
     <!-- Audio files -->
-    <audio id="song1">
+    <audio id="song1" name="Doors">
         <!-- <source src="track.ogg" type="audio/ogg" /> -->
         <source src="assets/audio/Doors.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="song2" name="Si no tuvieras miedo">
+        <source src="assets/audio/Sntm.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="song3" name="Rey de pretextos">
+        <source src="assets/audio/Rdp.m4a" type="audio/mpeg" />
         Your browser does not support the audio element.
     </audio>
 
