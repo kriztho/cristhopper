@@ -410,46 +410,71 @@ a.buttons {
   bottom: 0;
   width: 100%;
   height: 30px;
-  background: rgba(255,255,255,1);
+  background: transparent;
   z-index: 3;
-  box-shadow: 0px -1px 5px #AEAEAE;
+  -webkit-transition: background 300ms linear;
+  -moz-transition: background 300ms linear;
+  -ms-transition: background 300ms linear;
+  -o-transition: background 300ms linear;
 }
 
 /* Music player */
 #musicPlayer {
-  /*width: 100%;*/
+  /*width: 20%;*/
   /*height: 30px;*/
-  /*border: solid;*/
 }
 
 #trackName {
   float:left;
   margin-left: 10px;
-  color: white;
+  color: rgba(245,245,245,0.7);
 }
 
-#playButton {
+.button {
   height: 30px;
   width: 30px;
   border: none;
   padding: 0;
-  margin-right: 5px;
+  margin-right: 5px;  
+  float: left;
+  outline: none;  
+  opacity: 0.6;
+}
+
+.play {
+  background: url('../img/music-play-button.png') no-repeat;
   background-size: 75% 75%;
   background-position: center;
-  float: left;
-  outline: none;
+
 }
-.play {
-    background: url('../img/play.png') no-repeat;
-}
+
 .pause {
-    background: url('../img/pause.png') no-repeat;
+  background: url('../img/music-pause-button.png') no-repeat;
+  background-size: 75% 75%;
+  background-position: center;
+}
+
+.previous {
+  background: url('../img/music-previous-button.png') no-repeat;
+  background-size: 75% 75%;
+  background-position: center;
+}
+
+.next {
+  background: url('../img/music-next-button.png') no-repeat;
+  background-size: 75% 75%;
+  background-position: center;
+}
+
+#controls {
+  width: 20%;
+  height: inherit;
 }
 
 #timeline {
-  width: 90%;
+  width: 85%;
   height: 20px;
-  background: rgba(190, 190, 190, 0.9);
+  background: rgba(130, 130, 130, 0.6);
   margin-top: 5px;
   float: left;
   border-radius: 15px;
@@ -461,7 +486,7 @@ a.buttons {
   border-radius: 50%;
   margin-top: 1px;
   margin-left: 1px;
-  background: rgba(250, 250, 250, 0.9);
+  background: rgba(250, 250, 250, 0.6);
 }
 
 
@@ -528,22 +553,14 @@ a.buttons {
     font-size: 22px;
   }
 
-  #playButton {
+  .button {
     height: 50px;
     width: 50px;
-    border: none;
-    padding: 0;
-    margin-right: 5px;
-    background-size: 88% 88%;
-    background-position: center;
-    float: left;
-    outline: none;
   }
 
   #timeline {
-    width: 80%;
+    width: 50%;
     height: 40px;
-    background: rgba(190, 190, 190, 0.9);
     margin-top: 5px;
     float: left;
     border-radius: 35px;

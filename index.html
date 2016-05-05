@@ -152,9 +152,13 @@
             <div class="row">
                 <div class="col-md-12">
                     <div id="musicPlayer">
-                        <button id="playButton" class="play" onclick="play()"></button>
+                        <div id="controls">
+                            <button id="previousButton" class="button previous" onclick="previous()"></button>
+                            <button id="playButton" class="button play" onclick="play()"></button>
+                            <button id="nextButton" class="button next" onclick="next()"></button>
+                        </div> 
                         <div id="timeline">
-                            <span id="trackName" class="">Cristhopper - Doors</span>
+                            <span id="trackName" class="">Doors</span>
                             <div id="playhead"></div>
                         </div>
                     </div>

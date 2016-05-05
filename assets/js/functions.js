@@ -76,11 +76,11 @@ function play() {
     if (music.paused) {
         music.play();
         playButton.className = "";
-        playButton.className = "pause";
+        playButton.className = "button pause";
     } else {
         music.pause();
         playButton.className = "";
-        playButton.className = "play";
+        playButton.className = "button play";
     }
 }
 
@@ -91,7 +91,9 @@ $(window).scroll(function() {
 
     if (scroll >= 50) {
         $(".navbar-inverse").css("background-color", "rgba(0,0,0,0.6")
+        $(".footer").css("background-color", "rgba(0,0,0,0.6")
     } else {
-        $(".navbar-inverse").css("background-color", "transparent")        
+        $(".navbar-inverse").css("background-color", "transparent")
+        $(".footer").css("background-color", "transparent")
     }
 });
