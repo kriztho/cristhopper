@@ -1,17 +1,21 @@
 // JS file with all functions needed
 
 // song Player Functions
-var duration;
-var music = [document.getElementById('song1'),
-            document.getElementById('song2'),
-            document.getElementById('song3')]
+var player;
+var music;
+var song;
 var currentSong = 0
 
+$(document).ready(getPlaylist());
+
 function timeUpdate() {
-    var min = Math.floor(song.currentTime / 60.0);
-    var sec = Math.floor(song.currentTime % 60.0);  
-    var minDuration = Math.floor(song.duration / 60.0);
-    var secDuration = Math.floor(song.duration % 60.0);  
+
+    currentTime = player.currentTime() / 1000;
+    duration = song.duration / 1000;
+    var min = Math.floor(currentTime / 60.0);
+    var sec = Math.floor(currentTime % 60.0);  
+    var minDuration = Math.floor(duration / 60.0);
+    var secDuration = Math.floor(duration % 60.0);  
 
     if (min < 10) {
         min = "0" + min;
@@ -34,21 +38,45 @@ function timeUpdate() {
 
 function play() {
 
-    // Get current song
-    song = music[currentSong];
-    song.addEventListener("timeupdate", timeUpdate, false);
+    if (playButton.className == "button play") {
 
-    if (song.paused) {
-        song.play();
-        playButton.className = "";
-        playButton.className = "button pause";
+        // Get current song
+        song = music[currentSong];
+
+        SC.stream('/tracks/'+song.id).then(function(p){
+            player = p;
+            player.play();
+
+            player.on("play-start", function(){
+                setTrackName(song.title);
+                playButton.className = "button pause";
+            })
+
+            player.on("play-resume", function(){
+                playButton.className = "button pause";
+            })
+
+            player.on("pause", function(){
+                playButton.className = "button play";
+            })
+
+            player.on("time", function(){
+                timeUpdate();
+            })          
+        });
+
     } else {
-        song.pause();
-        playButton.className = "";
-        playButton.className = "button play";
+        player.pause();
     }
+}
 
-    $("#trackName").text(song.getAttribute("name"));
+function restart() {
+    player.seek(0);
+    player.pause();
+}
+
+function setTrackName(name) {
+    $("#trackName").text(name);
 }
 
 function getPlaylist() {
@@ -58,22 +86,12 @@ function getPlaylist() {
     })
 
     SC.get('/playlists/215541872').then(function(playlist) {
-        console.log(playlist.tracks[0].title);
-        console.log(playlist.tracks[1].title);
-        console.log(playlist.tracks[2].title);
+        music = playlist.tracks;
+        currentSong = 0;
     })
-
-    // SC.stream('/tracks/229197145').then(function(player){
-    //   player.play();
-    // });
 }
 
 function next() {
-    
-    // Restart current song
-    song.currentTime = 0;
-    song.pause();
-    song.removeEventListener("timeupdate", timeUpdate, false);
 
     // Advance to next song
     currentSong++;
@@ -82,14 +100,11 @@ function next() {
     }
     
     // Play
+    restart();
     play();
 }
 
 function previous() {
-
-    // Restart current song
-    song.currentTime = 0;
-    song.pause();
 
     // Advance to previous song
     currentSong--;
@@ -98,6 +113,7 @@ function previous() {
     }
     
     // Play
+    restart();
     play();
 }
 
