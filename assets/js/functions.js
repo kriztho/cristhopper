@@ -70,9 +70,17 @@ function play() {
     }
 }
 
+function playSong(index) {
+    currentSong = index;
+    restart();
+    play();
+}
+
 function restart() {
-    player.seek(0);
-    player.pause();
+    if (player != null) {
+        player.seek(0);
+        player.pause();
+    }
 }
 
 function setTrackName(name) {
