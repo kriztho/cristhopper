@@ -7,11 +7,6 @@ var music = [document.getElementById('song1'),
             document.getElementById('song3')]
 var currentSong = 0
 
-// Get audio file duration
-// song.addEventListener("canplaythrough", function() {
-//     duration = song.duration;
-// }, false);
-
 function timeUpdate() {
     var min = Math.floor(song.currentTime / 60.0);
     var sec = Math.floor(song.currentTime % 60.0);  
@@ -54,6 +49,23 @@ function play() {
     }
 
     $("#trackName").text(song.getAttribute("name"));
+}
+
+function getPlaylist() {
+
+    SC.initialize({
+        client_id: '77f5b478af070e995f57553bb4ac0eaa'
+    })
+
+    SC.get('/playlists/215541872').then(function(playlist) {
+        console.log(playlist.tracks[0].title);
+        console.log(playlist.tracks[1].title);
+        console.log(playlist.tracks[2].title);
+    })
+
+    // SC.stream('/tracks/229197145').then(function(player){
+    //   player.play();
+    // });
 }
 
 function next() {

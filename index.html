@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <meta name="author" content="Cristhopper Armenta">
-    <meta name="robots" content="index,nofollow" />
+    <!-- <meta name="robots" content="index,nofollow" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <!-- CSS -->
@@ -19,6 +19,7 @@
     <script type="text/javascript" src="assets/js/jquery-2.2.3.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
     <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
 
 </head>
 
@@ -154,11 +155,11 @@
                     <div id="musicPlayer">
                         <div id="controls">
                             <button id="previousButton" class="button previous" onclick="previous()"></button>
-                            <button id="playButton" class="button play" onclick="play()"></button>
+                            <button id="playButton" class="button play" onclick="getSongURL()"></button>
                             <button id="nextButton" class="button next" onclick="next()"></button>
                         </div> 
-                        <span id="trackName">Click play to start</span>
-                        <span id="trackTime">00:00 - 00:00</span> 
+                        <span id="trackName" class="nocursor noselect">Click play to start</span>
+                        <span id="trackTime" class="nocursor noselect">00:00 - 00:00</span> 
                     </div>
                 </div>
             </div>
