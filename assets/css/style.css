@@ -337,9 +337,10 @@ a.buttons {
 }
 
 .square-btn:hover {
-    color:white;
-    border:2px solid #6D6D6D;
-    background:#6D6D6D;
+    color:rgba(34,34,34,0.7);
+    font-weight: 700;
+    border:2px solid rgba(245,245,245,0);
+    background:rgba(245,245,245,0.7);
     text-decoration:none;
 }
 
