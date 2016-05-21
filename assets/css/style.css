@@ -180,7 +180,7 @@ button:focus {
 }
 
 .pattern {
-    background-image:url(../img/pattern.png);
+    background-image:url(../img/background/pattern.png);
     background-repeat: repeat;
     background-attachment:scroll;
     width:100%;
@@ -191,7 +191,7 @@ button:focus {
 }
 
 .divider {
-    background-image:url(../img/divider.png);
+    background-image:url(../img/background/divider.png);
     display:block;
     width:300px;
     height:35px;
@@ -395,6 +395,7 @@ a.buttons {
 
 .gallery img {
   width: 100px;
+  padding-top: 5px;
 }
 
 .modal-header {
@@ -500,33 +501,33 @@ a.buttons {
   height: 30px;
   width: 30px;
   border: none;
-  margin-right: 5px;  
+  margin-right: 5px;
   float: left;
-  outline: none;  
+  outline: none;
   opacity: 0.6;
 }
 
 .play {
-  background: url('../img/music-play-button.png') no-repeat;
+  background: url('../img/player/music-play-button.png') no-repeat;
   background-size: 75% 75%;
   background-position: center;
 
 }
 
 .pause {
-  background: url('../img/music-pause-button.png') no-repeat;
+  background: url('../img/player/music-pause-button.png') no-repeat;
   background-size: 75% 75%;
   background-position: center;
 }
 
 .previous {
-  background: url('../img/music-previous-button.png') no-repeat;
+  background: url('../img/player/music-previous-button.png') no-repeat;
   background-size: 75% 75%;
   background-position: center;
 }
 
 .next {
-  background: url('../img/music-next-button.png') no-repeat;
+  background: url('../img/player/music-next-button.png') no-repeat;
   background-size: 75% 75%;
   background-position: center;
 }
@@ -562,7 +563,7 @@ a.buttons {
   }
 
   .video-background {
-      background: url(../img/backgroundTablet.png) 35% center;
+      background: url(../img/background/backgroundTablet.png) 35% center;
   }
 
   .buttons {
@@ -577,7 +578,7 @@ a.buttons {
 }
 
   .small-background-section {
-      background: url(../img/background2.png) 35% 40%;
+      background: url(../img/background/background2.png) 35% 40%;
   }
 
   #colorize {
@@ -619,7 +620,7 @@ a.buttons {
     color: rgba(245,245,245,0.7);
     float: right;
   }
-  
+
   .button {
     margin-top: 5px;
     margin-right: 5px;
@@ -633,11 +634,11 @@ a.buttons {
 @media only screen and (max-width: 736px) {
 
   .video-background {
-      background: url(../img/background.png) 35% center;
+      background: url(../img/background/background.png) 35% center;
   }
 
   .small-background-section {
-      background: url(../img/background2.png) 35% 40%;
+      background: url(../img/background/background2.png) 35% 40%;
   }
 
   #trackName {
@@ -647,13 +648,13 @@ a.buttons {
   }
 
   #trackTime {
-    font-size: 15px;    
+    font-size: 15px;
     color: rgba(245,245,245,0.7);
     float: right;
     padding: 15px 0px 10px 2px;
     margin: 0;
   }
-  
+
   .button {
     margin: 8px 0 0 0;
     padding: 0;
